@@ -42,12 +42,17 @@ PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES script-utils"
 PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
+PACKAGES="$PACKAGES luci-app-openclash_0.46.064_all"
+PACKAGES="$PACKAGES luci-app-frpc_25.036.29749~c60cfb5_all"
+PACKAGES="$PACKAGES luci-i18n-frpc-zh-cn_25.036.29749~c60cfb5_all"
+PACKAGES="$PACKAGES luci-app-vlmcsd_1.0-r5_all"
+PACKAGES="$PACKAGES luci-i18n-vlmcsd-zh-cn_25.036.29749~c60cfb5_all"
 
 # 判断是否需要编译 Docker 插件
-if [ "$INCLUDE_DOCKER" = "yes" ]; then
-    PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
-    echo "Adding package: luci-i18n-dockerman-zh-cn"
-fi
+# if [ "$INCLUDE_DOCKER" = "yes" ]; then
+#     PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
+#     echo "Adding package: luci-i18n-dockerman-zh-cn"
+# fi
 
 # 构建镜像
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Building image with the following packages:"
